@@ -1,0 +1,59 @@
+﻿@model IEnumerable<WebAppBiblioteca.Models.Prestamo>
+
+@{
+    ViewBag.Title = "Prestamos";
+}
+
+<h2>Listado de prestamos</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.fechaPrestamo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fechaVencimiento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.diasVencidos)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Libro1.titulo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Usuario1.nombreCompleto)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.fechaPrestamo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fechaVencimiento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.diasVencidos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Libro1.titulo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Usuario1.nombreCompleto)
+            </td>
+            <td>
+                @Html.ActionLink("Modificar", "Edit", new { id = item.codigoPrestamo }) |
+                @Html.ActionLink("Consultar", "Details", new { id = item.codigoPrestamo }) |
+                @Html.ActionLink("Eliminar", "Delete", new { id = item.codigoPrestamo })
+            </td>
+        </tr>
+    }
+
+</table>
+@Html.ActionLink("Volver", "Index", "Home/Index", null, new { @class = "btn btn-success btn-large" })

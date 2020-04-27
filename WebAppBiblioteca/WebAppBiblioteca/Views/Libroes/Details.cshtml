@@ -1,0 +1,42 @@
+﻿@model WebAppBiblioteca.Models.Libro
+
+@{
+    ViewBag.Title = "Detalles";
+}
+
+<h2>Detalles del libro</h2>
+
+<div>
+    <h4>Libro</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.titulo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.titulo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estanteria.codigoEstanteria)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estanteria.codigoEstanteria)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tematica.descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tematica.descripcion)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Modificar", "Edit", new { id = Model.codigoISBN }) |
+    @Html.ActionLink("Volver a la lista", "Index")
+</p>

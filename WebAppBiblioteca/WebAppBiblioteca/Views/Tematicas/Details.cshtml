@@ -1,0 +1,25 @@
+﻿@model WebAppbBiblioteca.Models.Tematica
+
+@{
+    ViewBag.Title = "Detalles";
+}
+
+<h2>Detalles de las temáticas</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descripcion)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Modificar", "Edit", new { id = Model.codigo }) |
+    @Html.ActionLink("Volver a la lista", "Index")
+</p>

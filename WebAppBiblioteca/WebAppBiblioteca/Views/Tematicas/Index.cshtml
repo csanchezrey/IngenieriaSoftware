@@ -1,0 +1,35 @@
+﻿@model IEnumerable<WebAppbBiblioteca.Models.Tematica>
+
+@{
+    ViewBag.Title = "Temáticas";
+}
+
+<h2>Listado de temáticas</h2>
+
+<p>
+    @Html.ActionLink("Agregar nueva tematica", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.descripcion)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.descripcion)
+            </td>
+            <td>
+                @Html.ActionLink("Modificar", "Edit", new { id = item.codigo }) |
+                @Html.ActionLink("Consultar", "Details", new { id = item.codigo }) |
+                @Html.ActionLink("Eliminar", "Delete", new { id = item.codigo })
+            </td>
+        </tr>
+    }
+
+</table>
+@Html.ActionLink("Volver", "Index", "Home/Index", null, new { @class = "btn btn-success btn-large" })

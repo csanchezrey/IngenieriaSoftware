@@ -1,0 +1,47 @@
+﻿@model IEnumerable<WebAppBiblioteca.Models.Libro>
+
+@{
+    ViewBag.Title = "Libros";
+}
+
+<h2>Listado de libros</h2>
+
+<p>
+    @Html.ActionLink("Agregar un libro", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.titulo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Estanteria.codigoEstanteria)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tematica.descripcion)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.titulo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estanteria.codigoEstanteria)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tematica.descripcion)
+            </td>
+            <td>
+                @Html.ActionLink("Modificar", "Edit", new { id = item.codigoISBN }) |
+                @Html.ActionLink("Consultar", "Details", new { id = item.codigoISBN }) |
+                @Html.ActionLink("Eliminar", "Delete", new { id = item.codigoISBN })
+            </td>
+        </tr>
+    }
+
+</table>
+@Html.ActionLink("Volver", "Index", "Home/Index", null, new { @class = "btn btn-success btn-large" })

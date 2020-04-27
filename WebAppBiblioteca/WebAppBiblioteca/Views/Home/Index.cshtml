@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "Pagina principal";
+}
+<body background="~/images1/fondoBiblioteca.jpg">
+</body>
+<p>
+
+
+</p>
+<div class="jumbotron jumbotron-fluid">
+    <h2>App Biblioteca</h2>
+    <p class="lead">Bienvenido, seleccione una opción</p>
+    <div class="container">
+        <div class="btn-group">
+            @Html.ActionLink("Consultar listado de libros", "Index", "Libroes/Index", null, new { @class = "btn btn-info btn-large" })
+            @Html.ActionLink("Consultar tematicas", "Index", "Tematicas/Index", null, new { @class = "btn btn-info btn-large" })
+            @Html.ActionLink("Consultar usuarios registrados", "Index", "Usuarios/Index", null, new { @class = "btn btn-info btn-large" })
+            @Html.ActionLink("Consultar prestamos realizados", "Index", "Prestamoes/Index", null, new { @class = "btn btn-info btn-large" })
+            @Html.ActionLink("Consultar estanterias", "Index", "Estanterias/Index", null, new { @class = "btn btn-info btn-large" })
+        </div>
+    </div>
+</div>

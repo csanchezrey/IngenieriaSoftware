@@ -1,0 +1,48 @@
+﻿@model WebAppBiblioteca.Models.Usuario
+
+@{
+    ViewBag.Title = "Eliminar";
+}
+
+<h2>Eliminar un usuario</h2>
+
+<h3>Esta seguro de eliminar?</h3>
+<div>
+ 
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nombreCompleto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombreCompleto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.direccionPostal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.direccionPostal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tipoUsuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tipoUsuario)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-default" /> |
+            @Html.ActionLink("Vovler a la lista", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,57 @@
+﻿@model WebAppBiblioteca.Models.Prestamo
+
+@{
+    ViewBag.Title = "Detalles";
+}
+
+<h2>Detalles de los prestamos</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.fechaPrestamo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechaPrestamo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fechaVencimiento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechaVencimiento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.diasVencidos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.diasVencidos)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Libro1.titulo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Libro1.titulo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usuario1.nombreCompleto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usuario1.nombreCompleto)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Modificar", "Edit", new { id = Model.codigoPrestamo }) |
+    @Html.ActionLink("Volver a la lista", "Index")
+</p>

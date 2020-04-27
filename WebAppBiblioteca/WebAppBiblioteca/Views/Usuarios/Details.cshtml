@@ -1,0 +1,41 @@
+﻿@model WebAppBiblioteca.Models.Usuario
+
+@{
+    ViewBag.Title = "Detalles";
+}
+
+<h2>Detalles de los usuario</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nombreCompleto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombreCompleto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.direccionPostal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.direccionPostal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tipoUsuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tipoUsuario)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Modificar", "Edit", new { id = Model.identificacion }) |
+    @Html.ActionLink("Volver a la lista", "Index")
+</p>

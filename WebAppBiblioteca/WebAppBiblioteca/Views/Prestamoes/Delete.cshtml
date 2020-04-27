@@ -1,0 +1,64 @@
+﻿@model WebAppBiblioteca.Models.Prestamo
+
+@{
+    ViewBag.Title = "Eliminar";
+}
+
+<h2>Eliminar un prestamo</h2>
+
+<h3>Esta seguro de eliminar?</h3>
+<div>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.fechaPrestamo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechaPrestamo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fechaVencimiento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechaVencimiento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.diasVencidos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.diasVencidos)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Libro1.titulo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Libro1.titulo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usuario1.nombreCompleto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usuario1.nombreCompleto)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-default" /> |
+            @Html.ActionLink("Volver a la lista", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d07e6a5c734946258161ad12166c912b" Name="Diagram1">
+        <EntityTypeShape EntityType="BD_BIBLIOTECAModel.Estanteria" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_BIBLIOTECAModel.Libro" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_BIBLIOTECAModel.Prestamo" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_BIBLIOTECAModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_BIBLIOTECAModel.Tematica" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_BIBLIOTECAModel.TipoUsuario" Width="1.5" PointX="0.75" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_BIBLIOTECAModel.Usuario" Width="1.5" PointX="3" PointY="8.125" IsExpanded="true" />
+        <AssociationConnector Association="BD_BIBLIOTECAModel.FK__Libro__codigoEst__47DBAE45" ManuallyRouted="false" />
+        <AssociationConnector Association="BD_BIBLIOTECAModel.FK__Libro__codigoTem__46E78A0C" ManuallyRouted="false" />
+        <AssociationConnector Association="BD_BIBLIOTECAModel.FK__Prestamo__libro__4F7CD00D" ManuallyRouted="false" />
+        <AssociationConnector Association="BD_BIBLIOTECAModel.FK__Prestamo__usuari__4E88ABD4" ManuallyRouted="false" />
+        <AssociationConnector Association="BD_BIBLIOTECAModel.FK__Usuario__tipoUsu__534D60F1" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

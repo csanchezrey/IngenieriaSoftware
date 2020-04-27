@@ -1,0 +1,26 @@
+﻿@model WebAppBiblioteca.Models.Estanteria
+
+@{
+    ViewBag.Title = "Detalles";
+}
+
+<h2>Detalles de las estanterias</h2>
+
+<div>
+    <h4>Estanteria</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.capacidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.capacidad)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Modificar", "Edit", new { id = Model.codigoEstanteria }) |
+    @Html.ActionLink("Volver a la lista", "Index")
+</p>
